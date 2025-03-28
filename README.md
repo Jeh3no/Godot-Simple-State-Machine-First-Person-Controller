@@ -1,4 +1,4 @@
-A simple state machine first person controller
+A simple state machine first person controller asset made in Godot 4
 
 # **General**
 
