@@ -51,6 +51,12 @@ All keys bindings can be modified
 - C = crouch
 - Ctrl = mouse mode
 
+# **How to use**
+
+
+It's an asset, which means you can add it to an existing project without any issue.
+Simply download it, add it to your project, and get the files you want to use, that's all.
+
 
 
 
