@@ -29,9 +29,9 @@ The video showcasing the asset features :
  - Jumping (multiple jump system)
  - Jump buffering
  - Coyote jump/time
- - Air control
+ - Air control (easely customizable thanks to curves)
  - Bunny hopping (+ auto bunny hop)
-   
+    
  - Camera tilt
  - Camera bob
  - Custom smooth FOV
