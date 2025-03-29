@@ -40,19 +40,6 @@ The video showcasing the asset features :
  - Reticle
  - Properties HUD
 
-
-# **Controls**
-
-
-All keys bindings can be modified
-
-- W, S, A, D (alternatively : up, down, left, right) = move
-- Space = jump
-- Left shift = run
-- C = crouch
-- Ctrl = mouse mode
-
-
 # **Purpose**
 
 
@@ -67,7 +54,16 @@ And so here we go !
 
 
 It's an asset, which means you can add it to an existing project without any issue.
-Simply download it, add it to your project, and get the files you want to use, that's all.
+
+Simply download it, add it to your project, and get the files you want to use, and add the following keybindings to your project : 
+  - moveForward
+  - moveBackward
+  - moveLeft
+  - moveRight
+  - crouch
+  - run
+  - jump
+  - mouseMode
 
 
 # **Requets**
