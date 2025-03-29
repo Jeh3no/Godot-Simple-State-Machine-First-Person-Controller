@@ -35,7 +35,7 @@ The video showcasing the asset features :
     
  - Camera tilt
  - Camera bob
- - Custom smooth FOV
+ - Custom FOV
    
  - Reticle
  - Properties HUD
