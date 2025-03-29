@@ -36,6 +36,9 @@ var headBobValue : float
 @export_group("Mouse variables")
 var mouseFree : bool = false
 
+@export_group("Keybind variables")
+@export var mouseModeAction : String = ""
+
 #references variables
 @onready var camera : Camera3D = $Camera
 @onready var playChar : PlayerCharacter = $".."
@@ -90,6 +93,6 @@ func cameraTilt(delta):
 
 func mouseMode():
 	#manage the mouse mode (visible = can use mouse on the screen, captured = mouse not visible and locked in at the center of the screen)
-	if Input.is_action_just_pressed("mouseMode"): mouseFree = !mouseFree
+	if Input.is_action_just_pressed(mouseModeAction): mouseFree = !mouseFree
 	if !mouseFree: Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	else: Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

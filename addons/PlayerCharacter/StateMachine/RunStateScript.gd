@@ -51,26 +51,26 @@ func applies(delta : float):
 	cR.model.scale.y = lerp(cR.model.scale.y, cR.baseModelHeight, cR.heightChangeSpeed * delta)
 	
 func inputManagement():
-	if Input.is_action_just_pressed("jump"):
+	if Input.is_action_just_pressed(cR.jumpAction):
 		transitioned.emit(self, "JumpState")
 		
-	if Input.is_action_just_pressed("crouch"):
+	if Input.is_action_just_pressed(cR.crouchAction):
 		transitioned.emit(self, "CrouchState")
 		
 	if cR.continiousRun:
 		#has to press run button once to run
-		if Input.is_action_just_pressed("run"):
+		if Input.is_action_just_pressed(cR.runAction):
 			cR.walkOrRun = "WalkState"
 			transitioned.emit(self, "WalkState")
 	else:
 		#has to continuously press run button to run
-		if !Input.is_action_pressed("run"):
+		if !Input.is_action_pressed(cR.runAction):
 			cR.walkOrRun = "WalkState"
 			transitioned.emit(self, "WalkState")
 		
 		
 func move(delta : float):
-	cR.inputDirection = Input.get_vector("moveLeft", "moveRight", "moveForward", "moveBackward")
+	cR.inputDirection = Input.get_vector(cR.moveLeftAction, cR.moveRightAction, cR.moveForwardAction, cR.moveBackwardAction)
 	cR.moveDirection = (cR.camHolder.basis * Vector3(cR.inputDirection.x, 0.0, cR.inputDirection.y)).normalized()
 	
 	if cR.moveDirection and cR.is_on_floor():

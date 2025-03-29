@@ -35,7 +35,7 @@ func applies(delta : float):
 	cR.model.scale.y = lerp(cR.model.scale.y, cR.baseModelHeight, cR.heightChangeSpeed * delta)
 		
 func inputManagement():
-	if Input.is_action_just_pressed("jump"):
+	if Input.is_action_just_pressed(cR.jumpAction):
 		#check if can jump buffer
 		if cR.floorCheck.is_colliding() and cR.lastFramePosition.y > cR.position.y and cR.nbJumpsInAirAllowed <= 0: cR.jumpBuffOn = true
 		#check if can coyote jump
@@ -55,7 +55,7 @@ func checkIfFloor():
 			else: transitioned.emit(self, "IdleState")
 		
 func move(delta : float):
-	cR.inputDirection = Input.get_vector("moveLeft", "moveRight", "moveForward", "moveBackward")
+	cR.inputDirection = Input.get_vector(cR.moveLeftAction, cR.moveRightAction, cR.moveForwardAction, cR.moveBackwardAction)
 	cR.moveDirection = (cR.camHolder.basis * Vector3(cR.inputDirection.x, 0.0, cR.inputDirection.y)).normalized()
 	
 	if !cR.is_on_floor():

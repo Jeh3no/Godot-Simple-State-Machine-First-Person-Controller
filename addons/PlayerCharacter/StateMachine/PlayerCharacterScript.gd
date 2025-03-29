@@ -63,6 +63,15 @@ var coyoteJumpOn : bool = false
 @onready var jumpGravity : float = (-2.0 * jumpHeight) / (jumpTimeToPeak * jumpTimeToPeak)
 @onready var fallGravity : float = (-2.0 * jumpHeight) / (jumpTimeToFall * jumpTimeToFall)
 
+@export_group("Keybind variables")
+@export var moveForwardAction : String = ""
+@export var moveBackwardAction : String = ""
+@export var moveLeftAction : String = ""
+@export var moveRightAction : String = ""
+@export var runAction : String = ""
+@export var crouchAction : String = ""
+@export var jumpAction : String = ""
+
 #references variables
 @onready var camHolder : Node3D = $CameraHolder
 @onready var model : MeshInstance3D = $Model
@@ -71,13 +80,12 @@ var coyoteJumpOn : bool = false
 @onready var hud : CanvasLayer = $HUD
 @onready var ceilingCheck : RayCast3D = $Raycasts/CeilingCheck
 @onready var floorCheck : RayCast3D = $Raycasts/FloorCheck
-@onready var stepCast : ShapeCast3D = $StepCast
 
 func _ready():
 	#set move variables, and value references
-	moveSpeed = runSpeed
-	moveAccel = runAccel
-	moveDeccel = runDeccel
+	moveSpeed = walkSpeed
+	moveAccel = walkAccel
+	moveDeccel = walkDeccel
 	
 	hitGroundCooldownRef = hitGroundCooldown
 	jumpCooldownRef = jumpCooldown

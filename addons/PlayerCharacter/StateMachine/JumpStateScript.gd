@@ -39,7 +39,7 @@ func applies(delta : float):
 	cR.model.scale.y = lerp(cR.model.scale.y, cR.baseModelHeight, cR.heightChangeSpeed * delta)
 	
 func inputManagement():
-	if Input.is_action_just_pressed("jump"):
+	if Input.is_action_just_pressed(cR.jumpAction):
 		jump()
 		
 func checkIfFloor():
@@ -47,7 +47,7 @@ func checkIfFloor():
 		transitioned.emit(self, "InairState")
 		
 func move(delta : float):
-	cR.inputDirection = Input.get_vector("moveLeft", "moveRight", "moveForward", "moveBackward")
+	cR.inputDirection = Input.get_vector(cR.moveLeftAction, cR.moveRightAction, cR.moveForwardAction, cR.moveBackwardAction)
 	cR.moveDirection = (cR.camHolder.basis * Vector3(cR.inputDirection.x, 0.0, cR.inputDirection.y)).normalized()
 	
 	#move only apply when the character is not on the floor (so if he's in the air)

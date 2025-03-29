@@ -50,10 +50,10 @@ func applies(delta : float):
 	
 func inputManagement():
 	#manage the state transitions depending on the actions inputs
-	if Input.is_action_just_pressed("jump"):
+	if Input.is_action_just_pressed(cR.jumpAction):
 		transitioned.emit(self, "JumpState")
 		
-	if Input.is_action_just_pressed("crouch"):
+	if Input.is_action_just_pressed(cR.crouchAction):
 		transitioned.emit(self, "CrouchState")
 		
 	if Input.is_action_just_pressed("run"):
@@ -64,7 +64,7 @@ func move(delta : float):
 	#manage the character movement
 	
 	#direction input
-	cR.inputDirection = Input.get_vector("moveLeft", "moveRight", "moveForward", "moveBackward")
+	cR.inputDirection = Input.get_vector(cR.moveLeftAction, cR.moveRightAction, cR.moveForwardAction, cR.moveBackwardAction)
 	#get the move direction depending on the input
 	cR.moveDirection = (cR.camHolder.basis * Vector3(cR.inputDirection.x, 0.0, cR.inputDirection.y)).normalized()
 	
