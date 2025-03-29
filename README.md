@@ -59,11 +59,11 @@ Simply download it, add it to your project, get the files you want to use.
 
  # Keybinding : 
 
-    You will see for the player character script (and in the camera script) a keybinding variables group,
+   You will see for the player character script (and in the camera script) a keybinding variables group,
 
-    you need to create a input action in your project for each action, and then type the exact same name into the corresponding input action variable
+   you need to create a input action in your project for each action, and then type the exact same name into the corresponding input action variable
 
-    (for example : name your move forward action "moveForward", and then type "moveForward" into the variable "moveForwardAction").
+   (for example : name your move forward action "moveForward", and then type "moveForward" into the variable "moveForwardAction").
 
 # **Requets**
 
