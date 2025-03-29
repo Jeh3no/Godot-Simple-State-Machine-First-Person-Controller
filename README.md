@@ -55,16 +55,11 @@ And so here we go !
 
 It's an asset, which means you can add it to an existing project without any issue.
 
-Simply download it, add it to your project, and get the files you want to use, and add the following keybindings to your project : 
-  - moveForward
-  - moveBackward
-  - moveLeft
-  - moveRight
-  - crouch
-  - run
-  - jump
-  - mouseMode
+Simply download it, add it to your project, get the files you want to use.
 
+You will see for the player character script (and in the camera script) a keybinding variables group, for it, 
+you need to create a input action in your project for each one, and then type the exact same name into the corresponding input action variables
+(for example : name your move forward action "moveForward", and then type "moveForward" into the variable "moveForwardAction").
 
 # **Requets**
 
