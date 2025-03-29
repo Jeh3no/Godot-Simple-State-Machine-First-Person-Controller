@@ -19,6 +19,7 @@ He works on Godot 4.4, 4.3, and 4.2. I didn't test it in Godot 4.1 and Godot 4.0
 
 The video showcasing the asset features : 
 
+
 # **Features**
 
  - Smooth moving
@@ -34,28 +35,48 @@ The video showcasing the asset features :
     
  - Camera tilt
  - Camera bob
- - Custom smooth FOV
+ - Custom FOV
    
  - Reticle
  - Properties HUD
 
+# **Purpose**
 
-# **Controls**
 
+At start, i just wanted to rework my FPS controller template, make an alternate version of it, closer to the finite state machine approach.
 
-All keys bindings can be modified
+But while i was working on it, i said to myself "why not share it with the community, when it's ready ?".
 
-- W, S, A, D (alternatively : up, down, left, right) = move
-- Space = jump
-- Left shift = run
-- C = crouch
-- Ctrl = mouse mode
+And so here we go !
+
 
 # **How to use**
 
 
 It's an asset, which means you can add it to an existing project without any issue.
-Simply download it, add it to your project, and get the files you want to use, that's all.
+
+Simply download it, add it to your project, and get the files you want to use, and add the following keybindings to your project : 
+  - moveForward
+  - moveBackward
+  - moveLeft
+  - moveRight
+  - crouch
+  - run
+  - jump
+  - mouseMode
+
+
+# **Requets**
+
+- For any bug request, please write on down in the "issues" section.
+
+- For any new feature/improvement request, please write it down in the "discussions" section.
+
+
+# **Credits**
+
+
+Godot Theme prototype Textures, by PiCode : https://godotengine.org/asset-library/asset/2480
 
 
 

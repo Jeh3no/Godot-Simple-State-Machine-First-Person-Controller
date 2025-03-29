@@ -171,26 +171,6 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TopLine" type="Line2D" parent="HUD/Crosshair"]
-position = Vector2(0, -2)
-points = PackedVector2Array(0, -1, 0, -10)
-width = 2.0
-
-[node name="RightLine" type="Line2D" parent="HUD/Crosshair"]
-position = Vector2(2, 0)
-points = PackedVector2Array(1, 0, 10, 0)
-width = 2.0
-
-[node name="BottomLine" type="Line2D" parent="HUD/Crosshair"]
-position = Vector2(0, 2)
-points = PackedVector2Array(0, 1, 0, 10)
-width = 2.0
-
-[node name="LeftLine" type="Line2D" parent="HUD/Crosshair"]
-position = Vector2(-2, 0)
-points = PackedVector2Array(-1, 0, -10, 0)
-width = 2.0
-
 [node name="PlayCharInfos" type="HBoxContainer" parent="HUD"]
 offset_top = 7.0
 offset_right = 804.0
