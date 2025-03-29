@@ -71,7 +71,6 @@ var coyoteJumpOn : bool = false
 @onready var hud : CanvasLayer = $HUD
 @onready var ceilingCheck : RayCast3D = $Raycasts/CeilingCheck
 @onready var floorCheck : RayCast3D = $Raycasts/FloorCheck
-@onready var stepCast : ShapeCast3D = $StepCast
 
 func _ready():
 	#set move variables, and value references
