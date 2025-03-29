@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://oj3blpxqf1bl"]
 
-[ext_resource type="PackedScene" uid="uid://bwggrf7sbmkcv" path="res://PlayerCharacter/PlayerCharacterScene.tscn" id="1_oh4cu"]
-[ext_resource type="Material" uid="uid://cmlreoo2qwhp4" path="res://Arts/StructureMaterial.tres" id="2_etmyc"]
+[ext_resource type="PackedScene" uid="uid://bwggrf7sbmkcv" path="res://addons/PlayerCharacter/PlayerCharacterScene.tscn" id="1_oh4cu"]
+[ext_resource type="Material" uid="uid://cmlreoo2qwhp4" path="res://addons/Arts/StructureMaterial.tres" id="2_etmyc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fjbi6"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -28,9 +28,10 @@ transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -
 shadow_enabled = true
 
 [node name="PlayerCharacter" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.7646, 1.50542, -19.959)
 
 [node name="PlayerCharacter" parent="PlayerCharacter" instance=ExtResource("1_oh4cu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.82, 1.50542, -11.946)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.999999, 0, 0, 0)
 
 [node name="Map" type="Node3D" parent="."]
 
