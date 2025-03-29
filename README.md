@@ -77,6 +77,12 @@ Simply download it, add it to your project, and get the files you want to use, t
 - For any new feature/improvement request, please write it down in the "discussions" section.
 
 
+# **Credits**
+
+
+Godot Theme prototype Textures, by PiCode : https://godotengine.org/asset-library/asset/2480
+
+
 
 
  
