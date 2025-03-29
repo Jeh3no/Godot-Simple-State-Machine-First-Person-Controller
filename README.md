@@ -67,15 +67,14 @@ And so here we go !
 
 
 It's an asset, which means you can add it to an existing project without any issue.
-
 Simply download it, add it to your project, and get the files you want to use, that's all.
 
 
 # **Requets**
 
-For any bug request, please write on down in the "issues" section.
+- For any bug request, please write on down in the "issues" section.
 
-For any new feature/improvement request, please write it down in the "discussions" section.
+- For any new feature/improvement request, please write it down in the "discussions" section.
 
 
 
