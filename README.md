@@ -57,8 +57,6 @@ It's an asset, which means you can add it to an existing project without any iss
 
 Simply download it, add it to your project, get the files you want to use.
 
-Keybinding :
-
 You will see for the player character script (and in the camera script) a keybinding variables group,
 
 you need to create a input action in your project for each action, and then type the exact same name into the corresponding input action variable
