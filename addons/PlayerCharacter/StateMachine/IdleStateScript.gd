@@ -56,7 +56,7 @@ func inputManagement():
 	if Input.is_action_just_pressed(cR.crouchAction):
 		transitioned.emit(self, "CrouchState")
 		
-	if Input.is_action_just_pressed("run"):
+	if Input.is_action_just_pressed(cR.runAction):
 		if cR.walkOrRun == "WalkState": cR.walkOrRun = "RunState"
 		elif cR.walkOrRun == "RunState": cR.walkOrRun = "WalkState"
 		
