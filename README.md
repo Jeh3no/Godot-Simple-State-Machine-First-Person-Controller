@@ -19,7 +19,7 @@ The asset is 100% written in GDScript.
 
 He works on Godot 4.4, 4.3, and 4.2. I didn't test it in Godot 4.1 and Godot 4.0, but it should work just fine.
 
-The video showcasing the asset features : 
+The video showcasing the asset features : https://youtu.be/xq3AqMtmM_4
 
 
 # **Features**
