@@ -39,9 +39,9 @@ var walkOrRun : String = "WalkState" #keep in memory if play char was walking or
 @export var walkDeccel : float
 
 @export_group("Run variables")
-@export var walkSpeed : float
-@export var walkAccel : float 
-@export var walkDeccel : float 
+@export var runSpeed : float
+@export var runAccel : float 
+@export var runDeccel : float 
 @export var continiousRun : bool = false #if true, doesn't need to keep run button on to run
 
 @export_group("Jump variables")
