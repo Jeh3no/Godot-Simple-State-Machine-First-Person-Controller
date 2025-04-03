@@ -43,8 +43,11 @@ func inputManagement():
 		jump()
 		
 func checkIfFloor():
-	if !cR.is_on_floor() and !cR.is_on_wall() and cR.velocity.y < 0.0:
+	if !cR.is_on_floor() and cR.velocity.y < 0.0:
 		transitioned.emit(self, "InairState")
+	if cR.is_on_floor():
+		if cR.moveDirection: transitioned.emit(self, cR.walkOrRun)
+		else: transitioned.emit(self, "IdleState")
 		
 func move(delta : float):
 	cR.inputDirection = Input.get_vector(cR.moveLeftAction, cR.moveRightAction, cR.moveForwardAction, cR.moveBackwardAction)
