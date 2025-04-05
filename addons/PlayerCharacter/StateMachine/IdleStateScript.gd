@@ -66,7 +66,7 @@ func move(delta : float):
 	#direction input
 	cR.inputDirection = Input.get_vector(cR.moveLeftAction, cR.moveRightAction, cR.moveForwardAction, cR.moveBackwardAction)
 	#get the move direction depending on the input
-	cR.moveDirection = (cR.camHolder.basis * Vector3(cR.inputDirection.x, 0.0, cR.inputDirection.y)).normalized()
+	cR.moveDirection = (cR.camHolder.global_basis * Vector3(cR.inputDirection.x, 0.0, cR.inputDirection.y)).normalized()
 	
 	if cR.moveDirection and cR.is_on_floor():
 		#transition to corresponding state

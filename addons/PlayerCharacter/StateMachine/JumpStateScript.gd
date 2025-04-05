@@ -51,7 +51,7 @@ func checkIfFloor():
 		
 func move(delta : float):
 	cR.inputDirection = Input.get_vector(cR.moveLeftAction, cR.moveRightAction, cR.moveForwardAction, cR.moveBackwardAction)
-	cR.moveDirection = (cR.camHolder.basis * Vector3(cR.inputDirection.x, 0.0, cR.inputDirection.y)).normalized()
+	cR.moveDirection = (cR.camHolder.global_basis * Vector3(cR.inputDirection.x, 0.0, cR.inputDirection.y)).normalized()
 	
 	#move only apply when the character is not on the floor (so if he's in the air)
 	if !cR.is_on_floor():
