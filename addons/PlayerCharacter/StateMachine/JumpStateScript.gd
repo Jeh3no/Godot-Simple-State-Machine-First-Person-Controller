@@ -62,6 +62,9 @@ func move(delta : float):
 			
 			cR.velocity.x = lerp(cR.velocity.x, cR.moveDirection.x * contrdDesMoveSpeed, contrdInAirMoveSpeed * delta)
 			cR.velocity.z = lerp(cR.velocity.z, cR.moveDirection.z * contrdDesMoveSpeed, contrdInAirMoveSpeed * delta)
+
+			if cR.velocity.length() > cR.maxSpeed:
+				cR.velocity = cR.velocity.normalized() * cR.maxSpeed
 		else:
 			#accumulate desired speed for bunny hopping
 			cR.desiredMoveSpeed = cR.velocity.length()
