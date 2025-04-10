@@ -58,6 +58,7 @@ var bufferedJump : bool = false
 @export var coyoteJumpCooldown : float
 var coyoteJumpCooldownRef : float
 var coyoteJumpOn : bool = false
+@export_range(0.1, 1.0, 0.05) var inAirInputMultiplier: float = 1.0
 
 @export_group("Gravity variables")
 @onready var jumpGravity : float = (-2.0 * jumpHeight) / (jumpTimeToPeak * jumpTimeToPeak)
