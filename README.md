@@ -17,7 +17,7 @@ He is also very customizable, with a whole set of open variables for every state
 
 The asset is 100% written in GDScript.
 
-He works on Godot 4.4, 4.3, and 4.2. I didn't test it in Godot 4.1 and Godot 4.0, but it should work just fine.
+He works perfectly on Godot 4.4, and should also works wells on the others 4.x versions (4.3, 4.2, 4.1, 4.0), but you will have to remove the uid files.
 
 The video showcasing the asset features : https://youtu.be/xq3AqMtmM_4
 
@@ -69,7 +69,9 @@ you need to create a input action in your project for each action, and then type
 
 - For any bug request, please write on down in the "issues" section.
 
-- For any new feature/improvement request, please write it down in the "discussions" section.
+- For any new feature request, please write it down in the "discussions" section.
+
+- For any bug resolution/improvement commit, please write it down in the "pull requests" section.
 
 
 # **Credits**
