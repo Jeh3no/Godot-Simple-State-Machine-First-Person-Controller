@@ -26,8 +26,10 @@ class_name CameraObject
 #bob variables
 @export_group("Camera bob variables")
 var headBobValue : float
-@export var bobFrequency : float
-@export var bobAmplitude : float
+@export var runBobFrequency : float = 2.0
+@export var runBobAmplitude : float = 0.2
+@export var walkBobFrequency : float = 2.0
+@export var walkBobAmplitude : float = 0.1
 
 #tilt variables
 @export_group("Camera tilt variables")
@@ -86,17 +88,24 @@ func applies(delta : float):
 		camera.fov = lerp(camera.fov, startFOV, fovTransitionSpeed * delta)
 			
 func cameraBob(delta):
-	#manage the bobbing of the camera when the character is moving
-	headBobValue += delta * playChar.velocity.length() * float(playChar.is_on_floor())
-	camera.transform.origin = headbob(headBobValue) #apply the bob effect obtained to the camera
-		
-func headbob(time): 
-	#some trigonometry stuff here, basically it uses the cosinus and sinus functions (sinusoidal function) to get a nice and smooth bob effect
+	# Apply the bobbing effect based on the character's state and headbob settings
+	if playChar.stateMachine.currStateName == "Run":
+		headBobValue += delta * playChar.velocity.length() * float(playChar.is_on_floor())
+		camera.transform.origin = headbob(headBobValue, runBobFrequency, runBobAmplitude)
+	elif playChar.stateMachine.currStateName == "Walk":
+		headBobValue += delta * playChar.velocity.length() * float(playChar.is_on_floor())
+		camera.transform.origin = headbob(headBobValue, walkBobFrequency, walkBobAmplitude)
+	else:
+		# Reset headBobValue to prevent abrupt changes when starting to move
+		headBobValue = 0.0
+
+func headbob(time, frequency, amplitude):
+	# Some trigonometry stuff here, basically it uses the cosinus and sinus functions (sinusoidal function) to get a nice and smooth bob effect
 	var pos = Vector3.ZERO
-	pos.y = sin(time * bobFrequency) * bobAmplitude
-	pos.x = cos(time * bobFrequency / 4) * bobAmplitude
+	pos.y = sin(time * frequency) * amplitude
+	pos.x = cos(time * frequency / 4) * amplitude
 	return pos
-	
+
 func cameraTilt(delta): 
 	#tmanage the camera tilting when the character is moving on the x axis (left and right)
 	if !playChar.is_on_floor(): rotation.z = lerp(rotation.z, -playChar.inputDirection.x * camTiltRotationValue/onFloorTiltValDivider, camTiltRotationSpeed * delta)
