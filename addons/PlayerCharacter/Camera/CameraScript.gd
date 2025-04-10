@@ -12,6 +12,8 @@ class_name CameraObject
 
 @export_group("FOV variables")
 @export var startFOV : float
+@export var runFOV : float
+@export var fovTransitionSpeed : float
 
 #movement changes variables
 @export_group("Movement changes variables")
@@ -70,9 +72,18 @@ func applies(delta : float):
 	if playChar.stateMachine.currStateName == "Crouch":
 		position.y = lerp(position.y, 0.715 + crouchCameraDepth, crouchCameraLerpSpeed * delta)
 		rotation.z = lerp(rotation.z, deg_to_rad(crouchCamAngle) * playChar.inputDirection.x if playChar.inputDirection.x != 0.0 else deg_to_rad(crouchCamAngle), crouchCameraLerpSpeed * delta)
+	elif playChar.stateMachine.currStateName == "Run": 
+		camera.fov = lerp(camera.fov, runFOV, fovTransitionSpeed * delta)
+	elif playChar.stateMachine.currStateName == "Jump": 
+		# Maintain the current FOV when jumping
+		camera.fov = lerp(camera.fov, camera.fov, fovTransitionSpeed * delta)
+	elif playChar.stateMachine.currStateName == "Inair":
+		# Maintain the current FOV when in air
+		camera.fov = lerp(camera.fov, camera.fov, fovTransitionSpeed * delta)
 	else:
 		position.y = lerp(position.y, 0.715, baseCameraLerpSpeed * delta)
 		rotation.z = lerp(rotation.z, deg_to_rad(baseCamAngle), baseCameraLerpSpeed * delta)
+		camera.fov = lerp(camera.fov, startFOV, fovTransitionSpeed * delta)
 			
 func cameraBob(delta):
 	#manage the bobbing of the camera when the character is moving
