@@ -1,11 +1,11 @@
-A simple state machine first person controller asset made in Godot 4
+A simple and complete state machine first person controller asset, made in Godot 4.
 
 ![Asset logo](https://github.com/Jeh3no/Godot-Simple-State-Machine-First-Person-Controller/blob/main/addons/Arts/Godot%20Simple%20State%20Machine%20First%20Person%20Controller%20-%20Logo.png?raw=true)
 
 # **General**
 
 
-This asset provides a simple, fully commented, finite state machine based controller, camera, as well as a properties HUD
+This asset provides a simple, fully commented, finite state machine based controller, camera, as well as a properties HUD.
 
 A test map is provided to test the controller.
 
