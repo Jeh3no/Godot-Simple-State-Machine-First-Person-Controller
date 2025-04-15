@@ -53,6 +53,10 @@ func checkIfFloor():
 		else:
 			if cR.moveDirection: transitioned.emit(self, cR.walkOrRun)
 			else: transitioned.emit(self, "IdleState")
+			
+	if cR.is_on_wall():
+		cR.velocity.x = 0.0
+		cR.velocity.z = 0.0
 		
 func move(delta : float):
 	cR.inputDirection = Input.get_vector(cR.moveLeftAction, cR.moveRightAction, cR.moveForwardAction, cR.moveBackwardAction)

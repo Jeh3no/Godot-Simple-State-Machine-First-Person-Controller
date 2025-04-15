@@ -12,14 +12,14 @@
 [ext_resource type="Script" uid="uid://bh3rdvokmrar1" path="res://Godot-Simple-State-Machine-First-Person-Controller/addons/PlayerCharacter/StateMachine/InairStateScript.gd" id="59_bqtt6"]
 [ext_resource type="Script" uid="uid://bhoqhv7escpyx" path="res://Godot-Simple-State-Machine-First-Person-Controller/addons/PlayerCharacter/StateMachine/CrouchStateScript.gd" id="60_tu3bf"]
 
-[sub_resource type="Curve" id="Curve_h128t"]
-_limits = [0.0, 60.0, 0.0, 1.0]
-_data = [Vector2(0, 12), 0.0, 0.0, 0, 0, Vector2(1, 60), 0.0, 0.0, 0, 0]
+[sub_resource type="Curve" id="Curve_2tsxa"]
+_limits = [0.0, 30.0, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 30), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="Curve" id="Curve_takn3"]
+[sub_resource type="Curve" id="Curve_br1r7"]
 _limits = [0.0, 30.0, 0.0, 1.0]
-_data = [Vector2(0, 3), 0.0, 0.0, 0, 0, Vector2(1, 30), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 30), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5yjma"]
@@ -51,9 +51,9 @@ floor_max_angle = 1.13446
 floor_snap_length = 0.0
 platform_floor_layers = 4278190081
 script = ExtResource("1_h128t")
-desiredMoveSpeedCurve = SubResource("Curve_h128t")
+desiredMoveSpeedCurve = SubResource("Curve_2tsxa")
 maxSpeed = 30.0
-inAirMoveSpeedCurve = SubResource("Curve_takn3")
+inAirMoveSpeedCurve = SubResource("Curve_br1r7")
 hitGroundCooldown = 0.2
 bunnyHopDmsIncre = 3.0
 baseHitboxHeight = 2.0
@@ -97,8 +97,8 @@ fovTransitionSpeed = 6.2
 baseCameraLerpSpeed = 8.0
 crouchCameraLerpSpeed = 8.0
 crouchCameraDepth = -0.6
-bobFrequency = 1.1
-bobAmplitude = 0.15
+runBobFrequency = 1.0
+walkBobFrequency = 1.0
 camTiltRotationValue = 0.35
 camTiltRotationSpeed = 2.2
 onFloorTiltValDivider = 1.6

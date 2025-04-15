@@ -31,7 +31,6 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.7646, 1.50542, -19.959)
 
 [node name="PlayerCharacter" parent="PlayerCharacter" instance=ExtResource("1_oh4cu")]
-transform = Transform3D(-4.37114e-08, 0, 0.999999, 0, 1, 0, -1, 0, -4.37113e-08, 0, 0, 0)
 
 [node name="Map" type="Node3D" parent="."]
 
