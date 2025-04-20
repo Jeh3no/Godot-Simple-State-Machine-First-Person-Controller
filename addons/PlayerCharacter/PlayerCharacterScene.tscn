@@ -13,13 +13,13 @@
 [ext_resource type="Script" uid="uid://bhoqhv7escpyx" path="res://Godot-Simple-State-Machine-First-Person-Controller/addons/PlayerCharacter/StateMachine/CrouchStateScript.gd" id="60_tu3bf"]
 
 [sub_resource type="Curve" id="Curve_2tsxa"]
-_limits = [0.0, 30.0, 0.0, 1.0]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 30), 0.0, 0.0, 0, 0]
+_limits = [10.0, 30.0, 0.0, 60.0]
+_data = [Vector2(0, 10), 0.0, 0.0, 0, 0, Vector2(60, 30), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="Curve" id="Curve_br1r7"]
-_limits = [0.0, 30.0, 0.0, 1.0]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 30), 0.0, 0.0, 0, 0]
+_limits = [3.0, 30.0, 0.0, 30.0]
+_data = [Vector2(0, 3), 0.0, 0.0, 0, 0, Vector2(30, 30), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5yjma"]
@@ -84,6 +84,34 @@ runAction = "run"
 crouchAction = "crouch"
 jumpAction = "jump"
 
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initialState")]
+script = ExtResource("54_e0r17")
+initialState = NodePath("IdleState")
+
+[node name="IdleState" type="Node" parent="StateMachine"]
+script = ExtResource("55_dayh2")
+metadata/_custom_type_script = "uid://stil4xkf3tk0"
+
+[node name="WalkState" type="Node" parent="StateMachine"]
+script = ExtResource("56_w3td4")
+metadata/_custom_type_script = "uid://blt7dest23fk0"
+
+[node name="RunState" type="Node" parent="StateMachine"]
+script = ExtResource("57_gwv0a")
+metadata/_custom_type_script = "uid://5gk47o641xgt"
+
+[node name="JumpState" type="Node" parent="StateMachine"]
+script = ExtResource("58_gwv0a")
+metadata/_custom_type_script = "uid://dvu58wf01wils"
+
+[node name="InairState" type="Node" parent="StateMachine"]
+script = ExtResource("59_bqtt6")
+metadata/_custom_type_script = "uid://bh3rdvokmrar1"
+
+[node name="CrouchState" type="Node" parent="StateMachine"]
+script = ExtResource("60_tu3bf")
+metadata/_custom_type_script = "uid://bhoqhv7escpyx"
+
 [node name="CameraHolder" type="Node3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.55, 0)
 script = ExtResource("2_x12n0")
@@ -97,8 +125,8 @@ fovTransitionSpeed = 6.2
 baseCameraLerpSpeed = 8.0
 crouchCameraLerpSpeed = 8.0
 crouchCameraDepth = -0.6
-runBobFrequency = 1.0
-walkBobFrequency = 1.0
+runBobFrequency = 0.9
+walkBobFrequency = 0.8
 camTiltRotationValue = 0.35
 camTiltRotationSpeed = 2.2
 onFloorTiltValDivider = 1.6
@@ -131,34 +159,6 @@ debug_shape_custom_color = Color(1, 0, 0, 1)
 exclude_parent = false
 target_position = Vector3(0, -3, 0)
 debug_shape_custom_color = Color(0, 0, 0.956863, 1)
-
-[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initialState")]
-script = ExtResource("54_e0r17")
-initialState = NodePath("IdleState")
-
-[node name="IdleState" type="Node" parent="StateMachine"]
-script = ExtResource("55_dayh2")
-metadata/_custom_type_script = "uid://stil4xkf3tk0"
-
-[node name="WalkState" type="Node" parent="StateMachine"]
-script = ExtResource("56_w3td4")
-metadata/_custom_type_script = "uid://blt7dest23fk0"
-
-[node name="RunState" type="Node" parent="StateMachine"]
-script = ExtResource("57_gwv0a")
-metadata/_custom_type_script = "uid://5gk47o641xgt"
-
-[node name="JumpState" type="Node" parent="StateMachine"]
-script = ExtResource("58_gwv0a")
-metadata/_custom_type_script = "uid://dvu58wf01wils"
-
-[node name="InairState" type="Node" parent="StateMachine"]
-script = ExtResource("59_bqtt6")
-metadata/_custom_type_script = "uid://bh3rdvokmrar1"
-
-[node name="CrouchState" type="Node" parent="StateMachine"]
-script = ExtResource("60_tu3bf")
-metadata/_custom_type_script = "uid://bhoqhv7escpyx"
 
 [node name="HUD" type="CanvasLayer" parent="."]
 script = ExtResource("16_5jm78")

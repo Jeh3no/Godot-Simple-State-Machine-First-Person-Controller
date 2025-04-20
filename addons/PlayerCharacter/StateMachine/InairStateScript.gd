@@ -65,8 +65,9 @@ func move(delta : float):
 	if !cR.is_on_floor():
 		if cR.moveDirection:
 			if cR.desiredMoveSpeed < cR.maxSpeed: cR.desiredMoveSpeed += cR.bunnyHopDmsIncre * delta
-			var contrdDesMoveSpeed : float = cR.desiredMoveSpeedCurve.sample(cR.desiredMoveSpeed/100)
-			var contrdInAirMoveSpeed : float = cR.inAirMoveSpeedCurve.sample(cR.desiredMoveSpeed/100) * cR.inAirInputMultiplier
+			
+			var contrdDesMoveSpeed : float = cR.desiredMoveSpeedCurve.sample(cR.desiredMoveSpeed)
+			var contrdInAirMoveSpeed : float = cR.inAirMoveSpeedCurve.sample(cR.desiredMoveSpeed) * cR.inAirInputMultiplier
 			
 			cR.velocity.x = lerp(cR.velocity.x, cR.moveDirection.x * contrdDesMoveSpeed, contrdInAirMoveSpeed * delta)
 			cR.velocity.z = lerp(cR.velocity.z, cR.moveDirection.z * contrdDesMoveSpeed, contrdInAirMoveSpeed * delta)
