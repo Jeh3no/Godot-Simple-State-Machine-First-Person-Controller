@@ -41,6 +41,41 @@ collision_mask = 2
 size = Vector3(90, 1, 86)
 material = ExtResource("2_etmyc")
 
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25171, 2.15168, -42.5)
+use_collision = true
+collision_mask = 2
+size = Vector3(7.497, 0.5, 7)
+material = ExtResource("2_etmyc")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99679, 1.15147, -39.5)
+use_collision = true
+collision_mask = 2
+size = Vector3(1, 1.49957, 1)
+material = ExtResource("2_etmyc")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99679, 1.15147, -45.5)
+use_collision = true
+collision_mask = 2
+size = Vector3(1, 1.49957, 1)
+material = ExtResource("2_etmyc")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.48455, 1.15147, -45.5)
+use_collision = true
+collision_mask = 2
+size = Vector3(1, 1.49957, 1)
+material = ExtResource("2_etmyc")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.48455, 1.15147, -39.5)
+use_collision = true
+collision_mask = 2
+size = Vector3(1, 1.49957, 1)
+material = ExtResource("2_etmyc")
+
 [node name="CSGPolygon1" type="CSGPolygon3D" parent="Map"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 3, 3.5, 1.5, 2.5)
 use_collision = true
@@ -53,6 +88,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 4, 3.5, 1.5, -5.5)
 use_collision = true
 collision_mask = 2
 polygon = PackedVector2Array(-6, -1, -1, 2, 5, -1)
+material = ExtResource("2_etmyc")
+
+[node name="CSGPolygon6" type="CSGPolygon3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 4, 3.5, 1.5, -29.5)
+use_collision = true
+collision_mask = 2
+polygon = PackedVector2Array(-6, -2, -6, 1, 4, 1)
 material = ExtResource("2_etmyc")
 
 [node name="CSGPolygon2" type="CSGPolygon3D" parent="Map"]

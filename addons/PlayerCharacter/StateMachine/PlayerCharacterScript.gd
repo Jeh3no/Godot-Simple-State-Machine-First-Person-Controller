@@ -60,6 +60,18 @@ var coyoteJumpCooldownRef : float
 var coyoteJumpOn : bool = false
 @export_range(0.1, 1.0, 0.05) var inAirInputMultiplier: float = 1.0
 
+@export_group("Dash variables")
+@export var dashSpeed : float 
+@export var dashTime : float
+var dashTimeRef : float
+@export var nbDashAllowed : int
+var nbDashAllowedRef : int
+@export var timeBeforeCanDashAgain : float = 0.2
+var timeBeforeCanDashAgainRef : float = 0.2
+@export var timeBefReloadDash : float
+var timeBefReloadDashRef : float
+var velocityPreDash : Vector3 
+
 @export_group("Gravity variables")
 @onready var jumpGravity : float = (-2.0 * jumpHeight) / (jumpTimeToPeak * jumpTimeToPeak)
 @onready var fallGravity : float = (-2.0 * jumpHeight) / (jumpTimeToFall * jumpTimeToFall)

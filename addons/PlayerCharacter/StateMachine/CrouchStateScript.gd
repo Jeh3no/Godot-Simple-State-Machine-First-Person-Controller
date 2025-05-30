@@ -50,18 +50,25 @@ func applies(delta : float):
 	
 func inputManagement():
 	if Input.is_action_just_pressed(cR.jumpAction):
-		transitioned.emit(self, "JumpState")
-		
+		if !raycastVerification(): #if nothing block the player character when it will leaves the crouch state
+			transitioned.emit(self, "JumpState")
+			
 	if cR.continiousCrouch: 
 		#has to press run button once to run
 		if Input.is_action_just_pressed(cR.crouchAction):
-			cR.walkOrRun = "WalkState"
-			transitioned.emit(self, "WalkState")
+			if !raycastVerification():
+				cR.walkOrRun = "WalkState"
+				transitioned.emit(self, "WalkState")
 	else:
 		#has to continuously press crouch button to crouch
 		if !Input.is_action_pressed(cR.crouchAction):
-			cR.walkOrRun = "WalkState"
-			transitioned.emit(self, "WalkState")
+			if !raycastVerification():
+				cR.walkOrRun = "WalkState"
+				transitioned.emit(self, "WalkState")
+			
+func raycastVerification():
+	#check if the raycast used to check ceilings is colliding or not
+	return cR.ceilingCheck.is_colliding()
 			
 func move(delta : float):
 	cR.inputDirection = Input.get_vector(cR.moveLeftAction, cR.moveRightAction, cR.moveForwardAction, cR.moveBackwardAction)
