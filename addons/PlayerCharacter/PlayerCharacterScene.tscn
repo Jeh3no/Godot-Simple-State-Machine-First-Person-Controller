@@ -75,10 +75,10 @@ jumpTimeToFall = 0.24
 jumpCooldown = 0.2
 nbJumpsInAirAllowed = 1
 coyoteJumpCooldown = 0.3
-moveForwardAction = "moveForward"
-moveBackwardAction = "moveBackward"
-moveLeftAction = "moveLeft"
-moveRightAction = "moveRight"
+moveForwardAction = "move_forward"
+moveBackwardAction = "move_backward"
+moveLeftAction = "move_left"
+moveRightAction = "move_right"
 runAction = "run"
 crouchAction = "crouch"
 jumpAction = "jump"
@@ -90,6 +90,10 @@ initialState = NodePath("IdleState")
 [node name="IdleState" type="Node" parent="StateMachine"]
 script = ExtResource("55_dayh2")
 metadata/_custom_type_script = "uid://stil4xkf3tk0"
+
+[node name="CrouchState" type="Node" parent="StateMachine"]
+script = ExtResource("60_tu3bf")
+metadata/_custom_type_script = "uid://bhoqhv7escpyx"
 
 [node name="WalkState" type="Node" parent="StateMachine"]
 script = ExtResource("56_w3td4")
@@ -106,10 +110,6 @@ metadata/_custom_type_script = "uid://dvu58wf01wils"
 [node name="InairState" type="Node" parent="StateMachine"]
 script = ExtResource("59_bqtt6")
 metadata/_custom_type_script = "uid://bh3rdvokmrar1"
-
-[node name="CrouchState" type="Node" parent="StateMachine"]
-script = ExtResource("60_tu3bf")
-metadata/_custom_type_script = "uid://bhoqhv7escpyx"
 
 [node name="CameraHolder" type="Node3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.55, 0)
@@ -129,7 +129,7 @@ walkBobFrequency = 0.8
 camTiltRotationValue = 0.35
 camTiltRotationSpeed = 2.2
 onFloorTiltValDivider = 1.6
-mouseModeAction = "mouseMode"
+mouseModeAction = "mouse_mode"
 
 [node name="Camera" type="Camera3D" parent="CameraHolder"]
 cull_mask = 3
