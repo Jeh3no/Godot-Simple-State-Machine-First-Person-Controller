@@ -1,99 +1,85 @@
+A simple and complete state machine first person controller asset, made in Godot 4.
 
-An advanced FPS Controller Template made in Godot 4
-
-
-![Template logo](Arts/TemplateImages/Logo.png)
-
+![Asset logo](https://github.com/Jeh3no/Godot-Simple-State-Machine-First-Person-Controller/blob/main/addons/Arts/Godot%20Simple%20State%20Machine%20First%20Person%20Controller%20-%20Logo.png?raw=true)
 
 # **General**
 
 
-This template provides a complete, advanced and fully commented controller, camera, as well as a properties HUD
+This asset provides a simple, fully commented, finite state machine based controller, camera, as well as a properties HUD.
 
-A template map is provided to test the controller.
+A test map is provided to test the controller.
 
 The controller use a finite state machine, designed to be easely editable, allowing to easily add, remove and modify behaviours and actions.
 
+Each state has his own script, allowing to easly filter and manage the communication between each state.
+
 He is also very customizable, with a whole set of open variables for every state and for more general stuff. This is the same for the camera.
 
-The template is 100% written in GDScript.
+The asset is 100% written in GDScript.
 
-He works on Godot 4.3 and Godot 4.2.
-I didn't test it in Godot 4.1 and Godot 4.0, but it should work just fine.
+He works perfectly on Godot 4.4, and should also works wells on the others 4.x versions (4.3, 4.2, 4.1, 4.0), but you will have to remove the uid files.
 
-The video showcasing the template features : https://www.youtube.com/watch?v=qdmzIYgVb1E
-
-And the video showcasing the added features of the 2.0 version : https://www.youtube.com/watch?v=3jwx65NFijI
+The video showcasing the asset features : https://youtu.be/xq3AqMtmM_4
 
 
 # **Features**
 
-
  - Smooth moving
+ - Ability to move on slopes and hills
  - Walking
- - Crouching
- - Running
+ - Crouching (continious and once pressed input)
+ - Running (continious and once pressed input)
  - Jumping (multiple jump system)
  - Jump buffering
  - Coyote jump/time
- - Air control
- - Sliding (and air slide)
- - Dashing
- - Bunny hopping
- - Wall running
- - Grappling hook (pull type)
- - Knockback
-
+ - Air control (easely customizable thanks to curves)
+ - Bunny hopping (+ auto bunny hop)
+    
  - Camera tilt
  - Camera bob
- - Custom smooth FOV
-
- - Pause menu
- - Options menu (keybinding, video, audio)
- - Crosshair
+ - Custom FOV
+   
+ - Reticle
  - Properties HUD
-
-
-# **Controls**
-
-
-All keys bindings can be modified
-
-- W, S, A, D (alternatively : up, down, left, right) = move / wall run
-- Space = jump
-- Left shift = run
-- C = crouch / slide
-- Left control = dash
-- Escape = pause menu
-- Left mouse button = grapple hook
-- Right click button = knockback tool
-
 
 # **Purpose**
 
 
-My main goal with this project was to provide a complete and easy to manage/modify controller for FPS games (It can be apply to first person games in general, even if the movement list has been thinking as an FPS one)
+At start, i just wanted to rework my FPS controller template, make an alternate version of it, closer to the finite state machine approach.
 
-I hope that it will be the case.
+But while i was working on it, i said to myself "why not share it with the community, when it's ready ?".
+
+And so here we go !
 
 
 # **How to use**
 
 
-This plugin is a template, which means it's a project that has been designed to be a base of a new project, not an addon to an existing one.
+It's an asset, which means you can add it to an existing project without any issue.
 
-So to correctly use it, you simply have to download it, and then import the project on the Godot app welcome page, and that's all !
+Simply download it, add it to your project, get the files you want to use.
 
+You will see for the player character script (and in the camera script) a keybinding variables group,
+
+you need to create a input action in your project for each action, and then type the exact same name into the corresponding input action variable
+
+(for example : name your move forward action "moveForward", and then type "moveForward" into the variable "moveForwardAction").
 
 # **Requets**
 
-For any bug request, please write on down in the "issues" section.
+- For any bug request, please write on down in the "issues" section.
 
-For any new feature/improvement request, please write it down in the "discussions" section.
+- For any new feature request, please write it down in the "discussions" section.
+
+- For any bug resolution/improvement commit, please write it down in the "pull requests" section.
 
 
 # **Credits**
 
-Kenney Prototype Textures, by Kenny, reworked for Godot by Calinou : https://godotengine.org/asset-library/asset/781
- 
+
+Godot Theme prototype Textures, by PiCode : https://godotengine.org/asset-library/asset/2480
+
+
+
+
  

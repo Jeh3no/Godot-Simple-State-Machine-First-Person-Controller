@@ -6,30 +6,28 @@ var currState : State
 var currStateName  : String
 var states : Dictionary = {}
 
-@onready var play_char : CharacterBody3D = $".."
+@onready var charRef : CharacterBody3D = $".."
 
-signal change_fov
-
-func _ready() -> void:
+func _ready():
 	#get all the state childrens
 	for child in get_children():
 		if child is State:
 			states[child.name.to_lower()] = child
-			child.transitioned.connect(on_state_child_transition)
+			child.transitioned.connect(onStateChildTransition)
 			
 	#if initial state, transition to it
 	if initialState:
-		initialState.enter(play_char)
+		initialState.enter(charRef)
 		currState = initialState
 		currStateName = currState.stateName
 		
-func _process(delta : float) -> void:
+func _process(delta : float):
 	if currState: currState.update(delta)
 	
-func _physics_process(delta: float) -> void:
+func _physics_process(delta: float):
 	if currState: currState.physics_update(delta)
 	
-func on_state_child_transition(state : State, newStateName : String) -> void:
+func onStateChildTransition(state : State, newStateName : String):
 	#manage the transition from one state to another
 	
 	if state != currState: return
@@ -41,9 +39,7 @@ func on_state_child_transition(state : State, newStateName : String) -> void:
 	if currState: currState.exit()
 	
 	#enter the new state
-	newState.enter(play_char)
+	newState.enter(charRef)
 	
 	currState = newState
 	currStateName = currState.stateName
-	
-	emit_signal("change_fov")

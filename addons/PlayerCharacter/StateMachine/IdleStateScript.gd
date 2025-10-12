@@ -15,11 +15,12 @@ func enter(charRef : CharacterBody3D):
 func verifications():
 	#manage the appliements that need to be set at the start of the state
 	cR.floor_snap_length = 1.0
+	if cR.jumpCooldown > 0.0: cR.jumpCooldown = -1.0
 	if cR.nbJumpsInAirAllowed < cR.nbJumpsInAirAllowedRef: cR.nbJumpsInAirAllowed = cR.nbJumpsInAirAllowedRef
 	if cR.coyoteJumpCooldown < cR.coyoteJumpCooldownRef: cR.coyoteJumpCooldown = cR.coyoteJumpCooldownRef
 	
 func physics_update(delta : float):
-	check_if_floor()
+	checkIfFloor()
 	
 	applies(delta)
 	
@@ -29,13 +30,13 @@ func physics_update(delta : float):
 	
 	move(delta)
 	
-func check_if_floor():
+func checkIfFloor():
 	#manage the appliements and state transitions that needs to be sets/checked/performed
 	#every time the play char pass through one of the following : floor-inair-onwall
 	if !cR.is_on_floor() and !cR.is_on_wall():
 		transitioned.emit(self, "InairState")
 	if cR.is_on_floor():
-		if cR.jumpBuffOn and cR.jumpCooldown < 0.0: 
+		if cR.jumpBuffOn: 
 			cR.bufferedJump = true
 			cR.jumpBuffOn = false
 			transitioned.emit(self, "JumpState")
@@ -44,17 +45,13 @@ func applies(delta : float):
 	#manage the appliements of things that needs to be set/checked/performed every frame
 	if cR.hitGroundCooldown > 0.0: cR.hitGroundCooldown -= delta
 	
-	#i don't know why, but if i put this line in verifications, it broke the jump cooldown, because he constantly stay at -1.0
-	if cR.jumpCooldown > 0.0: cR.jumpCooldown = -1.0
-	
 	cR.hitbox.shape.height = lerp(cR.hitbox.shape.height, cR.baseHitboxHeight, cR.heightChangeSpeed * delta)
 	cR.model.scale.y = lerp(cR.model.scale.y, cR.baseModelHeight, cR.heightChangeSpeed * delta)
 	
 func inputManagement():
 	#manage the state transitions depending on the actions inputs
 	if Input.is_action_just_pressed(cR.jumpAction):
-		if cR.jumpCooldown < 0.0:
-			transitioned.emit(self, "JumpState")
+		transitioned.emit(self, "JumpState")
 		
 	if Input.is_action_just_pressed(cR.crouchAction):
 		transitioned.emit(self, "CrouchState")
@@ -62,9 +59,6 @@ func inputManagement():
 	if Input.is_action_just_pressed(cR.runAction):
 		if cR.walkOrRun == "WalkState": cR.walkOrRun = "RunState"
 		elif cR.walkOrRun == "RunState": cR.walkOrRun = "WalkState"
-		
-	if Input.is_action_just_pressed(cR.flyAction):
-		transitioned.emit(self, "FlyState")
 		
 func move(delta : float):
 	#manage the character movement
