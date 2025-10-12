@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvwq4f2xioxxn"
-path="res://.godot/imported/logo_pink_512x512.png-8a30122f2e0a6f6a28ee852cfad04ba3.ctex"
+path="res://.godot/imported/logo_pink_512x512.png-90b734ef6981e8c71c7864f943a67680.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Godot-Simple-State-Machine-First-Person-Controller/addons/Arts/godot-prototype-texture/PNG/logo_512x512/logo_pink_512x512.png"
-dest_files=["res://.godot/imported/logo_pink_512x512.png-8a30122f2e0a6f6a28ee852cfad04ba3.ctex"]
+source_file="res://Godot-Advanced-State-Machine-First-Person-Controller/addons/Arts/godot-prototype-texture/PNG/logo_512x512/logo_pink_512x512.png"
+dest_files=["res://.godot/imported/logo_pink_512x512.png-90b734ef6981e8c71c7864f943a67680.ctex"]
 
 [params]
 
