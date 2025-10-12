@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bted8u547w8x7"
-path="res://.godot/imported/checker_red_512x512.png-ecdfcc88868ea8eec2c7aa63465c4a17.ctex"
+path="res://.godot/imported/checker_red_512x512.png-f98b847fcf874530c083fe78e814d83e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Godot-Simple-State-Machine-First-Person-Controller/addons/Arts/godot-prototype-texture/PNG/checker_512x512/checker_red_512x512.png"
-dest_files=["res://.godot/imported/checker_red_512x512.png-ecdfcc88868ea8eec2c7aa63465c4a17.ctex"]
+source_file="res://Godot-Advanced-State-Machine-First-Person-Controller/addons/Arts/godot-prototype-texture/PNG/checker_512x512/checker_red_512x512.png"
+dest_files=["res://.godot/imported/checker_red_512x512.png-f98b847fcf874530c083fe78e814d83e.ctex"]
 
 [params]
 
