@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://s3wmu3dn5rby"
-path="res://.godot/imported/Godot Simple State Machine First Person Controller - Logo.png-5ff69952fafacff17ff2f44189ccc69c.ctex"
+path="res://.godot/imported/Godot Simple State Machine First Person Controller - Logo.png-160f25b4a89be6c17bb2762d0684891d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Godot-Advanced-State-Machine-First-Person-Controller/addons/Arts/Godot Simple State Machine First Person Controller - Logo.png"
-dest_files=["res://.godot/imported/Godot Simple State Machine First Person Controller - Logo.png-5ff69952fafacff17ff2f44189ccc69c.ctex"]
+source_file="res://Godot-Simple-State-Machine-First-Person-Controller/addons/Arts/Godot Simple State Machine First Person Controller - Logo.png"
+dest_files=["res://.godot/imported/Godot Simple State Machine First Person Controller - Logo.png-160f25b4a89be6c17bb2762d0684891d.ctex"]
 
 [params]
 
