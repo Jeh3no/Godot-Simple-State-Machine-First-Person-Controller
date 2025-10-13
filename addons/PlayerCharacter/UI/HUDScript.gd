@@ -3,11 +3,11 @@ extends CanvasLayer
 class_name HUD
 
 #label references variables
-@onready var currentStateLT = $PlayCharInfos/VBoxContainer2/CurrentStateLabelText
-@onready var desiredMoveSpeedLT = $PlayCharInfos/VBoxContainer2/DesiredMoveSpeedLabelText
-@onready var velocityLT = $PlayCharInfos/VBoxContainer2/VelocityLabelText
-@onready var nbJumpsInAirAllowedLT = $PlayCharInfos/VBoxContainer2/NbJumpsInAirAllowedLabelText
-@onready var framesPerSecondLT = $PlayCharInfos2/VBoxContainer2/FramesPerSecondLabelText
+@onready var currentStateLT = %CurrentStateLabelText
+@onready var desiredMoveSpeedLT = %DesiredMoveSpeedLabelText
+@onready var velocityLT = %VelocityLabelText
+@onready var nbJumpsInAirAllowedLT = %NbJumpsInAirAllowedLabelText
+@onready var framesPerSecondLT = %FramesPerSecondLabelText
 
 func _process(_delta):
 	displayCurrentFPS()

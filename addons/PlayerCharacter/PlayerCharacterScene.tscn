@@ -217,6 +217,7 @@ vertical_alignment = 1
 layout_mode = 2
 
 [node name="CurrentStateLabelText" type="Label" parent="HUD/PlayCharInfos/VBoxContainer2"]
+unique_name_in_owner = true
 texture_filter = 1
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
@@ -225,6 +226,7 @@ label_settings = SubResource("LabelSettings_3aho1")
 vertical_alignment = 1
 
 [node name="DesiredMoveSpeedLabelText" type="Label" parent="HUD/PlayCharInfos/VBoxContainer2"]
+unique_name_in_owner = true
 texture_filter = 1
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
@@ -233,6 +235,7 @@ label_settings = SubResource("LabelSettings_3aho1")
 vertical_alignment = 1
 
 [node name="VelocityLabelText" type="Label" parent="HUD/PlayCharInfos/VBoxContainer2"]
+unique_name_in_owner = true
 texture_filter = 1
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
@@ -241,6 +244,7 @@ label_settings = SubResource("LabelSettings_3aho1")
 vertical_alignment = 1
 
 [node name="NbJumpsInAirAllowedLabelText" type="Label" parent="HUD/PlayCharInfos/VBoxContainer2"]
+unique_name_in_owner = true
 texture_filter = 1
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
@@ -274,6 +278,7 @@ vertical_alignment = 1
 layout_mode = 2
 
 [node name="FramesPerSecondLabelText" type="Label" parent="HUD/PlayCharInfos2/VBoxContainer2"]
+unique_name_in_owner = true
 texture_filter = 1
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
