@@ -1,0 +1,337 @@
+[gd_scene load_steps=3 format=3 uid="uid://bip32vgbjnvoc"]
+
+[ext_resource type="StyleBox" uid="uid://c50syhy1a4dmh" path="res://Godot-Advanced-State-Machine-First-Person-Controller/addons/PlayerCharacter/UI/player_character_ui_theme.tres" id="1_0kpxd"]
+[ext_resource type="LabelSettings" uid="uid://bs0stms0b56kp" path="res://Godot-Advanced-State-Machine-First-Person-Controller/addons/Arts/label_settings.tres" id="2_0lbfo"]
+
+[node name="MarginContainer" type="MarginContainer"]
+offset_right = 295.0
+offset_bottom = 376.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_0kpxd")
+
+[node name="PlayCharInfos" type="HBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/PlayCharInfos"]
+layout_mode = 2
+
+[node name="CurrentStateLabel" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Current state : "
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="DesiredMoveSpeedLabel" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Desired move speed : "
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="VelocityLabel" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Velocity : "
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="VelocityVectorLabel" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Velocity vector : "
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="IsOnFloorLabel" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Is on floor :"
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="CeilingCheckLabel" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Ceiling raycast colliding :"
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="JumpBufferLabel" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Jump buffering  on :"
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="CoyoteTimeLabel" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Coyote time :"
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="NbJumpsInAirAllowedLabel" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Nb jumps in air allowed :"
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="JumpCooldownLabel" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Time before can jump again :"
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="SlideTimeLabel" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Slide time :"
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="SlideCooldownLabel" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Time before can slide again :"
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="NbDashsAllowedLabel" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Nb dashs allowed :"
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="DashCooldownLabel" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Time before can dash again :"
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="WallrunTimeLabel" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Wallrun time :"
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/PlayCharInfos/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="CameraRotationLabel" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Camera rotation :"
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="CurrentFOVLabel" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Current FOV :"
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="CameraBobVerticalOffsetLabel" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Camera bob vertical offset :"
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/PlayCharInfos"]
+layout_mode = 2
+
+[node name="CurrentStateLabelText" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer2"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..................."
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="DesiredMoveSpeedLabelText" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer2"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..................."
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="VelocityLabelText" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer2"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..................."
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="VelocityVectorLabelText" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer2"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..................."
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="IsOnFloorLabelText" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer2"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..................."
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="CeilingCheckLabelText" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer2"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..................."
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="JumpBufferLabelText" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer2"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..................."
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="CoyoteTimeLabelText" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer2"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..................."
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="NbJumpsInAirAllowedLabelText" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer2"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..................."
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="JumpCooldownLabelText" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer2"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..................."
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="SlideTimeLabelText" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer2"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..................."
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="SlideCooldownLabelText" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer2"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..................."
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="NbDashsAllowedLabelText" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer2"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..................."
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="DashCooldownLabelText" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer2"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..................."
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="WallrunTimeLabelText" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer2"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..................."
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="PanelContainer/PlayCharInfos/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="CameraRotationLabelText" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer2"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..................."
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="CurrentFOVLabelText" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer2"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..................."
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
+
+[node name="CameraBobVerticalOffsetLabelText" type="Label" parent="PanelContainer/PlayCharInfos/VBoxContainer2"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..................."
+label_settings = ExtResource("2_0lbfo")
+vertical_alignment = 1
