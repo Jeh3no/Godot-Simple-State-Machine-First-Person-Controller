@@ -12,6 +12,12 @@ A test map is included to demonstrate the controller's capabilities.
 The controller uses a finite state machine architecture where each state has its own script, making it straightforward to add, remove, or modify behaviors. All movement parameters, camera settings, and keybindings are exposed as export variables in the inspector for easy customization.
 
 
+# Compatibility
+
+- **Godot 4.4, 4.5, 4.6**: Fully supported.
+- **Godot 4.0 - 4.3**: Should work, but you will need to delete the `.uid` files.
+
+
 # **Features**
 
 **Movement**
