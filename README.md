@@ -98,17 +98,7 @@ Select the `CameraHolder` node for camera settings:
 - **Bob** - Head bob pitch, roll, frequency, and height
 - **Zoom** - Zoom FOV and transition speed
 
-
-
-# **Purpose**
-
-At start, i just wanted to rework my FPS controller template, make an alternate version of it, closer to the finite state machine approach.
-
-But while i was working on it, i said to myself "why not share it with the community, when it's ready ?".
-
-And so here we go !
-
-
+  
 # Showcase videos
 
 The video showcasing the asset features (outdated on the look, but the movement features remains the same) : https://www.youtube.com/watch?v=xq3AqMtmM_4
