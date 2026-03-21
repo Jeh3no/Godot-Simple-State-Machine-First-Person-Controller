@@ -66,7 +66,7 @@ var coyote_jump_on: bool = false
 @export_group("Keybind variables")
 @export var move_forward_action: StringName = "play_char_move_forward_action"
 @export var move_backward_action: StringName = "play_char_move_backward_action"
-@export var move_left_action: StringName = "play_char_move_left_ation"
+@export var move_left_action: StringName = "play_char_move_left_action"
 @export var move_right_action: StringName = "play_char_move_right_action"
 @export var run_action: StringName = "play_char_run_action"
 @export var crouch_action: StringName = "play_char_crouch_action"
