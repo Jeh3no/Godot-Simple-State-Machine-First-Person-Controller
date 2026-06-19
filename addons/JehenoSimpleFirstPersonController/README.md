@@ -1,6 +1,6 @@
 A simple and complete state machine first person controller asset, made in Godot 4.
 
-![Asset logo](https://raw.githubusercontent.com/Jeh3no/Godot-Simple-State-Machine-First-Person-Controller/refs/heads/main/addons/JehenoSimpleFirstPersonController/Arts/Godot%20Simple%20State%20Machine%20First%20Person%20Controller%20-%20Logo.png)
+![Asset logo](https://raw.githubusercontent.com/Jeh3no/Godot-Simple-State-Machine-First-Person-Controller/refs/heads/main/addons/JehenoSimpleFirstPersonController/Arts/StoreImages/Godot%20Simple%20State%20Machine%20First%20Person%20Controller%20-%20Logo.png)
 
 
 # **General**
@@ -14,7 +14,7 @@ The controller uses a finite state machine architecture where each state has its
 
 # Compatibility
 
-- **Godot 4.4, 4.5, 4.6**: Fully supported.
+- **Godot 4.4 - 4.7**: Fully supported.
 - **Godot 4.0 - 4.3**: Should work, but you will need to delete the `.uid` files.
 
 
