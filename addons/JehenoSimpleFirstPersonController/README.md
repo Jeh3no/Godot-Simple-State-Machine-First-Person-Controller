@@ -45,6 +45,10 @@ The controller uses a finite state machine architecture where each state has its
 - Debug properties HUD
 - Input action checker
 
+## Showcase video
+
+The video showcasing the asset features (outdated on the look, but the movement features remains the same) : https://www.youtube.com/watch?v=xq3AqMtmM_4
+
 
 # Installation / Quickstart
 
@@ -69,6 +73,12 @@ By default, the key actions are defined as "play_char_{action_name}_action". Do 
 | `play_char_jump` | Jump | Space |
 | `play_char_zoom` | Camera zoom | Z |
 | `play_char_mouse_mode` | Toggle mouse capture | Esc |
+
+## Step 3(optional): Set up collisions
+
+Collisions masks and layers are already set up in the scenes, but for more clarity you can name them in the "3D Physics" section of your Godot projet settings window, as following :
+- 1 : world
+- 2 : player_character
 
 
 # State machine overview
@@ -104,10 +114,10 @@ Select the `CameraHolder` node for camera settings:
 - **Bob** - Head bob pitch, roll, frequency, and height
 - **Zoom** - Zoom FOV and transition speed
 
-  
-# Showcase videos
 
-The video showcasing the asset features (outdated on the look, but the movement features remains the same) : https://www.youtube.com/watch?v=xq3AqMtmM_4
+# Visual layers
+
+The camera can only see visual layer 1, and the player character model is under visual layer 2, to avoid clipping issues, especially when crouching
 
 
 # Issues and contributions

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://oj3blpxqf1bl"]
 
 [ext_resource type="PackedScene" uid="uid://bwggrf7sbmkcv" path="res://Godot-Simple-State-Machine-First-Person-Controller/addons/JehenoSimpleFirstPersonController/PlayerCharacter/player_character_scene.tscn" id="1_kvh0m"]
-[ext_resource type="Material" uid="uid://cw3w2rxysrrsl" path="res://Godot-Simple-State-Machine-First-Person-Controller/addons/JehenoSimpleFirstPersonController/Map/struture_material.tres" id="2_u126m"]
-[ext_resource type="Material" uid="uid://cmlreoo2qwhp4" path="res://Godot-Simple-State-Machine-First-Person-Controller/addons/JehenoSimpleFirstPersonController/Map/structure_material_2.tres" id="2_wvi4p"]
+[ext_resource type="Material" uid="uid://cw3w2rxysrrsl" path="res://Godot-Simple-State-Machine-First-Person-Controller/addons/JehenoSimpleFirstPersonController/Map/Materials/floor_struture_material.tres" id="2_u126m"]
+[ext_resource type="Material" uid="uid://cmlreoo2qwhp4" path="res://Godot-Simple-State-Machine-First-Person-Controller/addons/JehenoSimpleFirstPersonController/Map/Materials/not_floor_structure_material.tres" id="2_wvi4p"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fjbi6"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)

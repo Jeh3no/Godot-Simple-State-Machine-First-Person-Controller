@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vy87gqra0efn"
-path="res://.godot/imported/Godot Simple State Machine First Person Controller - Image 2.png-7861a27706ad696a5b991ebd063bb97c.ctex"
+uid="uid://bf140euqg2jlw"
+path="res://.godot/imported/Godot Simple State Machine First Person Controller - Image 1.png-4632665e7beceedd737d0d33758c8da2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Godot-Simple-State-Machine-First-Person-Controller/addons/JehenoSimpleFirstPersonController/Arts/Godot Simple State Machine First Person Controller - Image 2.png"
-dest_files=["res://.godot/imported/Godot Simple State Machine First Person Controller - Image 2.png-7861a27706ad696a5b991ebd063bb97c.ctex"]
+source_file="res://Godot-Simple-State-Machine-First-Person-Controller/addons/JehenoSimpleFirstPersonController/Arts/StoreImages/Godot Simple State Machine First Person Controller - Image 1.png"
+dest_files=["res://.godot/imported/Godot Simple State Machine First Person Controller - Image 1.png-4632665e7beceedd737d0d33758c8da2.ctex"]
 
 [params]
 

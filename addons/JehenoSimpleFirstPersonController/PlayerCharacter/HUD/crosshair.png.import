@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s3wmu3dn5rby"
-path="res://.godot/imported/Godot Simple State Machine First Person Controller - Logo.png-d75241b3169e8c548c370ff15b9e5561.ctex"
+uid="uid://cc2gr21tqe3wt"
+path="res://.godot/imported/crosshair.png-883f05520be02e2042d2d8271108fa18.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Godot-Simple-State-Machine-First-Person-Controller/addons/JehenoSimpleFirstPersonController/Arts/Godot Simple State Machine First Person Controller - Logo.png"
-dest_files=["res://.godot/imported/Godot Simple State Machine First Person Controller - Logo.png-d75241b3169e8c548c370ff15b9e5561.ctex"]
+source_file="res://Godot-Simple-State-Machine-First-Person-Controller/addons/JehenoSimpleFirstPersonController/PlayerCharacter/HUD/crosshair.png"
+dest_files=["res://.godot/imported/crosshair.png-883f05520be02e2042d2d8271108fa18.ctex"]
 
 [params]
 
