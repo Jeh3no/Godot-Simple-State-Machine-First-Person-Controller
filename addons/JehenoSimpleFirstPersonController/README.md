@@ -1,6 +1,6 @@
 A simple and complete state machine first person controller asset, made in Godot 4.
 
-![Asset logo](https://raw.githubusercontent.com/Jeh3no/Godot-Simple-State-Machine-First-Person-Controller/refs/heads/main/addons/JehenoSimpleFirstPersonController/Arts/Godot%20Simple%20State%20Machine%20First%20Person%20Controller%20-%20Logo.png)
+![Asset logo](https://raw.githubusercontent.com/Jeh3no/Godot-Simple-State-Machine-First-Person-Controller/refs/heads/main/addons/JehenoSimpleFirstPersonController/Arts/StoreImages/Godot%20Simple%20State%20Machine%20First%20Person%20Controller%20-%20Logo.png)
 
 
 # **General**
@@ -14,7 +14,7 @@ The controller uses a finite state machine architecture where each state has its
 
 # Compatibility
 
-- **Godot 4.4, 4.5, 4.6**: Fully supported.
+- **Godot 4.4 - 4.7**: Fully supported.
 - **Godot 4.0 - 4.3**: Should work, but you will need to delete the `.uid` files.
 
 
@@ -45,10 +45,6 @@ The controller uses a finite state machine architecture where each state has its
 - Debug properties HUD
 - Input action checker
 
-## Showcase video
-
-The video showcasing the asset features (outdated on the look, but the movement features remains the same) : https://www.youtube.com/watch?v=xq3AqMtmM_4
-
 
 # Installation / Quickstart
 
@@ -73,12 +69,6 @@ By default, the key actions are defined as "play_char_{action_name}_action". Do 
 | `play_char_jump` | Jump | Space |
 | `play_char_zoom` | Camera zoom | Z |
 | `play_char_mouse_mode` | Toggle mouse capture | Esc |
-
-## Step 3(optional): Set up collisions
-
-Collisions masks and layers are already set up in the scenes, but for more clarity you can name them in the "3D Physics" section of your Godot projet settings window, as following :
-- 1 : world
-- 2 : player_character
 
 
 # State machine overview
@@ -114,10 +104,10 @@ Select the `CameraHolder` node for camera settings:
 - **Bob** - Head bob pitch, roll, frequency, and height
 - **Zoom** - Zoom FOV and transition speed
 
+  
+# Showcase videos
 
-# Visual layers
-
-The camera can only see visual layer 1, and the player character model is under visual layer 2, to avoid clipping issues, especially when crouching
+The video showcasing the asset features (outdated on the look, but the movement features remains the same) : https://www.youtube.com/watch?v=xq3AqMtmM_4
 
 
 # Issues and contributions
