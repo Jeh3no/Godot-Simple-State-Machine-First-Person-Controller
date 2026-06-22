@@ -123,6 +123,11 @@ The video showcasing the asset features (outdated on the look, but the movement 
 - henkehedstrom (Github) - Default keybindings addition
 
 
+# Donations
+
+If you like my assets, and want to support my work : https://ko-fi.com/jeheno
+
+
 
 
  
